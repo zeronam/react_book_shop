@@ -38,7 +38,16 @@ const defaultStateEng = {
 };
 
 const reducerEng = (state = defaultStateEng, action) => {
+	switch(action.type){
+			case 'FILTER_SHOW_ALL':
+			return {...state, filterStatus: 'SHOW_ALL'};
+			case 'FILTER_MEMORIZED':
+			return {...state, filterStatus: 'MEMORIZED'};
+			case 'FILTER_NEED_PRACTICE':
+			return {...state, filterStatus: 'NEED_PRACTICE'};
+	}
 	return state;
+
 }
 
 ReactDOM.render(
