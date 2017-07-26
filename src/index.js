@@ -45,6 +45,16 @@ const reducerEng = (state = defaultStateEng, action) => {
 			return {...state, filterStatus: 'MEMORIZED'};
 			case 'FILTER_NEED_PRACTICE':
 			return {...state, filterStatus: 'NEED_PRACTICE'};
+			case 'TOGGLE_MEMORIZED':
+			return {...state, arrWords: state.arrWords.map( e=> {
+				if(e.id !== action.id) return e;
+				return {...e, memorized: !e.memorized}}
+
+			)
+
+		};
+			default:
+			break;
 	}
 	return state;
 

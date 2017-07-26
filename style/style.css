@@ -10,6 +10,6 @@
 .listbox li p{
 	display:inline-block;
 }
-.listbox li p:last-child{
+.listbox li p:nth-child(2){
 	float: right;
 }
